@@ -28,12 +28,14 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
     console.log(playerguess);
     
     
-// Logic
+// Logic starts here
 
+        // If the index of the variable "playerguess" is already inside of the array "lettersUsed" it will alert the player to choose a different letter
     if (lettersUsed.indexOf(playerguess) > -1) {
         alert("Try a different letter");
     }
 
+        // This else if statement is going to run if the letter that the player chose is different than the one chosen by the computer, and the user has more than 0 guesses left. The purpose of this statement is to keep updating the variable guessesLeft
     else if (playerguess !== computerLetter && guessesLeft > 0) {
         guessesLeft--;
         document.getElementById("guesses-left").textContent = guessesLeft;
@@ -42,6 +44,7 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
     
     }
 
+        // This else if statement is going to run if the letter that the player chose is equal to the one chosen by the computer. If that condition is met, wins will go up, lettersUsed will reset to nothing and guessesLeft will go back to 9 all of that happens AFTER you start playing again (click on any letter)
     else if (playerguess == computerLetter) {
         wins++;
         lettersUsed = [];
@@ -52,6 +55,7 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
 
     }
 
+        // This if statement is going to run if the variable guessesLeft equals 0. When that happens, losses will go up and lettersUsed will reset to nothing AFTER you start playing again (click on any letter)
     if (guessesLeft == 0) {
         losses++;
         lettersUsed = [];
@@ -63,17 +67,6 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
 
 } 
 
-
-
-
-
-
-//    if (playerguess == computerLetter) {
-//        alert("Wins " + wins);
-//    }
-//     else if (playerguess !== computerLetter) {
-//         alert("Loses " + loses);
-//     }
 
 
    
