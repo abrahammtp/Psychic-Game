@@ -1,24 +1,69 @@
+// Array that contains the letters, the computer will choose one of these randomly
+
 var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+// Variables that are going to be displayed on the website
 var wins = 0;
 
 var loses = 0;
 
-var guessesLeft = 0;
+var guessesLeft = 9; 
 
-var lettersUsed = 0;  
+var lettersUsed = []; 
 
-    var computerLetter = options[Math.floor(Math.random()*options.length)];
+// Variable playerguess does not have a value yet
+
+var playerguess; 
+
+// This variable uses the previous array to choose a random letter, this will be the computer's letter
+
+var computerLetter = options[Math.floor(Math.random()*options.length)];
     console.log(computerLetter);
 
+// Here we create a function that is going to assing a value to playerguess, using the letters on the keyboard
+
     document.onkeyup = function() {
-    var playerguess = String.fromCharCode(event.keyCode).toLocaleLowerCase();
+    playerguess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(playerguess);
+    
+    
+// Logic
+
+    if (lettersUsed.indexOf(playerguess) > -1) {
+        alert("Try a different letter");
+    }
+
+    else if (playerguess !== computerLetter && guessesLeft > 1) {
+        guessesLeft--;
+        document.getElementById("guesses-left").textContent = guessesLeft;
+        lettersUsed.push(playerguess); 
+        document.getElementById("guesses").textContent = lettersUsed;
+    }
+
+    else if (playerguess == computerLetter && guessesLeft > 0) {
+        wins++;
+        document.getElementById("wins").textContent = wins;
+        
+        
+    }
+
+} 
+
+
+
+
+
+
+//    if (playerguess == computerLetter) {
+//        alert("Wins " + wins);
+//    }
+//     else if (playerguess !== computerLetter) {
+//         alert("Loses " + loses);
+//     }
+
+
+   
+
     
 
-   if (playerguess == computerLetter) {
-       alert("Wins " + wins);
-   }
-    else if (playerguess !== computerLetter) {
-        alert("Loses " + loses);
-    }
-   }
+   
