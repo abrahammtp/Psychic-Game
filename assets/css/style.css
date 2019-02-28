@@ -1,3 +1,4 @@
+/* This is the container, will show the elements for the game */
 .game {
     text-align: center;
     margin: 150 200 200 200px;
@@ -9,6 +10,7 @@
     color: black;
 }
 
+/* The body tag is used for the background of the website */
 body {
     background-image: url(https://d2qs8jo5daq3wi.cloudfront.net/photos/204387/large/thinking.jpg?1508135847);
     background-position: center;

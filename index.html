@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Psychic Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- reset.css file, used to start the styling of the website from scratch -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <!-- style.css file, this is where I will give the website the design I prefer -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     
 </head>
@@ -14,25 +16,30 @@
 <body>
 
     
-
+<!-- Container called "game", it will display all the elements that the player needs to see in order to play the game -->
     <div class="game">
         <h1>Psychic Game</h1>
         <br>
         <br>
+        <!-- Brief explanation of what to do in order to play the game, tried to add some "fun" text -->
         <h2>I challenge you to guess what letter I'm thinking of!</h2>
         <p>To start the game, choose any letter from the alphabet. You have 9 opportunities to defeat me, choose wisely!</p>
         <br>
         <br>
+        <!-- This will update to show the wins from the player -->
         <h3>Wins:</h3><p id="wins"></p>
         <br>
+        <!-- This will update to show the losses from the player -->
         <h3>Losses:</h3><p id="losses"></p>
         <br>
+        <!-- This will update to show the guesses the player has left, he can try that many times before losing -->
         <h3>Guesses Left:</h3><p id="guesses-left"></p>
         <br>
+        <!-- This is going to show the letters the player has already guessed, and they have not matched the computer's guess -->
         <h3>Your Guesses So Far</h3><p id="guesses"></p>
         <br>
     </div>
-
+<!-- JavaScript file where the logic of the game takes place -->
     <script src="assets\javascript\game.js"></script>
 </body>
 
