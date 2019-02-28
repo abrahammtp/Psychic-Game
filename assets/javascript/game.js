@@ -1,4 +1,4 @@
-// Array that contains the letters, the computer will choose one of these randomly
+// Array that contains the letters, the computer will choose one of these randomly for the variable computerLetter
 
 var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -19,14 +19,11 @@ var playerguess;
 // This variable uses the previous array to choose a random letter, this will be the computer's letter
 
 var computerLetter = options[Math.floor(Math.random()*options.length)];
-    console.log(computerLetter);
 
 // Here we create a function that is going to assing a value to playerguess, using the letters on the keyboard
 
     document.onkeyup = function() {
     playerguess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(playerguess);
-    
     
 // Logic starts here
 
@@ -51,7 +48,6 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
         guessesLeft = 9;
         document.getElementById("wins").textContent = wins;
         computerLetter = options[Math.floor(Math.random()*options.length)];
-        console.log(computerLetter);
 
     }
 
@@ -59,10 +55,10 @@ var computerLetter = options[Math.floor(Math.random()*options.length)];
     if (guessesLeft == 0) {
         losses++;
         lettersUsed = [];
+        guessesLeft = 9;
         document.getElementById("guesses").textContent = lettersUsed;
         document.getElementById("losses").textContent = losses;
         computerLetter = options[Math.floor(Math.random()*options.length)];
-        console.log(computerLetter);
     }
 
 } 

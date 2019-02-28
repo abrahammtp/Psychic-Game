@@ -1,0 +1,17 @@
+.game {
+    text-align: center;
+    margin: 150 200 200 200px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgba(230, 164, 22, 0.4);
+    font-size: 25px;
+    color: black;
+}
+
+body {
+    background-image: url(https://d2qs8jo5daq3wi.cloudfront.net/photos/204387/large/thinking.jpg?1508135847);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
