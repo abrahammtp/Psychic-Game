@@ -2,7 +2,7 @@
 
 This is a guessing game, you have nine opportunities to guess the right letter. You will receive an alert if you have chosen a dupplicate letter, and once your nine guesses are up your losses number is going to increase if you have not guessed the correct letter. If you did guess the correct letter, your wins number will go up.
 
-# Technoliges used
+# Technologies used
 
   * HTML
   * CSS
